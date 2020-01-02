@@ -1,0 +1,27 @@
+// 普通变量
+
+@green: green;
+@base: white;
+header,footer{
+  background: @green;
+  h1{
+    color: @base;
+  }
+}
+
+// 作为选择器和类名
+
+@kuandu:width;
+
+.@{kuandu}{
+  @{kuandu}: 150px;
+}
+
+
+
+//作为url的变量
+@imgurl: "https://www.baidu.com/img/";
+header{
+  background: @green url("@{imgurl}bdlogo.png");
+  height: 500px;
+}

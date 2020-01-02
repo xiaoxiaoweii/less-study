@@ -1,0 +1,31 @@
+// 普通变量
+
+@green: green;
+@base: white;
+header,footer{
+  background: @green;
+  h1{
+    color: @base;
+  }
+}
+
+// 作为选择器和类名
+
+@kuandu:width;
+
+.@{kuandu}{
+  @{kuandu}: 150px;
+}
+
+
+
+//作为url的变量
+@imgurl: "https://www.baidu.com/img/";
+header{
+  background: @green url("@{imgurl}bdlogo.png");
+  height: 500px;
+}
+
+// 延迟加载 无论变量在前面出现还是后面出现都是一样的效果
+
+//定义多个变量两次时 会使用最后一次定义的变量
