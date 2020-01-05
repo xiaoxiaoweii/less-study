@@ -1,0 +1,46 @@
+
+// 不想输出mixin类  则在类后边加括号即可
+.p1{
+  color:red;
+}
+.p2{
+  background : #64d9c0;
+  .p1();
+}
+.p3{
+   background : #DAA520;
+  .p1;
+}
+
+// 带选择器的混合
+.my-hover-mixin() {
+  &:hover {
+    border: 1px solid red;
+  }
+}
+
+.p2 {
+  .my-hover-mixin()
+}
+
+// 带参数的混合
+
+// .border(@color){
+//   border: 1px solid @color;
+// }
+// .p3{
+//   &:hover{
+//     .border(green)
+//   }
+// }
+
+// 带参数并且有默认值的混合
+
+.border(@color:red){
+  border: 1px solid @color;
+}
+.p3{
+  &:hover{
+    .border()
+  }
+}

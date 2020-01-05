@@ -1,0 +1,17 @@
+.p1 {
+  color: red;
+}
+.p2 {
+  background: #64d9c0;
+  color: red;
+}
+.p3 {
+  background: #DAA520;
+  color: red;
+}
+.p2:hover {
+  border: 1px solid red;
+}
+.p3:hover {
+  border: 1px solid #ff0000;
+}
